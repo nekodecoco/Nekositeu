@@ -276,7 +276,7 @@ export default function CatProfilePage({
         {/* Admin hint when not authenticated */}
         {!isAdmin && (
           <button
-            onClick={() => requestAccess(() => {})}
+            onClick={() => requestAccess(() => { })}
             className="flex items-center gap-1.5 font-mono text-[10px] text-[#6B7280] hover:text-accent-blue transition-colors cursor-pointer"
           >
             <ShieldCheck className="w-3.5 h-3.5" />
@@ -332,11 +332,10 @@ export default function CatProfilePage({
           {/* File picker */}
           <div
             onClick={() => fileInputRef.current?.click()}
-            className={`relative h-48 rounded-xl border-2 border-dashed flex flex-col items-center justify-center gap-2 cursor-pointer transition-colors ${
-              addPreview
+            className={`relative h-48 rounded-xl border-2 border-dashed flex flex-col items-center justify-center gap-2 cursor-pointer transition-colors ${addPreview
                 ? "border-accent-blue/40"
                 : "border-white/10 hover:border-white/20"
-            } overflow-hidden`}
+              } overflow-hidden`}
           >
             {addPreview ? (
               // eslint-disable-next-line @next/next/no-img-element

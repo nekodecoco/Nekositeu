@@ -30,9 +30,8 @@ export default function CatsPage() {
             <GlassCard
               key={cat.id}
               hoverGlow={true}
-              className={`flex flex-col lg:flex-row overflow-hidden group ${
-                isEven ? "" : "lg:flex-row-reverse"
-              }`}
+              className={`flex flex-col lg:flex-row overflow-hidden group ${isEven ? "" : "lg:flex-row-reverse"
+                }`}
             >
               {/* Gradient Visual */}
               <div
