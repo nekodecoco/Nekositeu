@@ -7,7 +7,7 @@ import Badge from "@/components/ui/Badge";
 export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col gap-24 md:gap-32 w-full">
-      
+
       {/* Hero Section */}
       <section className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
         {/* Left Content */}
@@ -20,7 +20,7 @@ export default function Home() {
 
           {/* Heading */}
           <h1 className="font-hanken font-bold text-5xl md:text-7xl leading-tight text-white tracking-tight">
-            I&apos;m Alex Chen.
+            I&apos;m Nikko Alferez.
             <span className="block text-accent-blue mt-1">
               Designer & Coder.
             </span>
@@ -53,11 +53,11 @@ export default function Home() {
         <div className="relative flex-shrink-0">
           {/* Blurred Accent Glow */}
           <div className="absolute inset-0 bg-gradient-to-tr from-accent-blue/40 to-transparent rounded-full blur-2xl opacity-40 scale-110 pointer-events-none" />
-          
+
           {/* Avatar border wrapper */}
           <div className="relative w-64 h-64 md:w-72 md:h-72 p-2 bg-[#1F1F1F] border-2 border-white/8 rounded-full shadow-2xl overflow-hidden">
             <Image
-              src="/profile.png"
+              src="/formal.jpg"
               alt="Alex Chen Avatar"
               fill
               className="object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-500"
@@ -89,13 +89,13 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          
+
           {/* Projects Card - Span 8 */}
           <GlassCard className="md:col-span-8 group relative min-h-[300px] flex flex-col justify-end p-8 overflow-hidden cursor-pointer">
             {/* Background Graphic Grid/Particles */}
             <div className="absolute inset-0 bg-[radial-gradient(#1e1e1e_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent z-0" />
-            
+
             {/* Top Right Hover Icon */}
             <div className="absolute top-6 right-6 p-3 rounded-full bg-white/5 border border-white/5 text-accent-blue opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all z-10">
               <Eye className="w-5 h-5" />
@@ -118,7 +118,7 @@ export default function Home() {
             <div className="p-4 rounded-full bg-accent-blue/5 border border-accent-blue/10 text-accent-blue w-fit group-hover:scale-110 transition-transform">
               <Code className="w-6 h-6" />
             </div>
-            
+
             <div className="flex flex-col gap-2">
               <h3 className="font-hanken font-semibold text-2xl text-white group-hover:text-accent-blue transition-colors">
                 Research
