@@ -41,7 +41,7 @@ export default function Home() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="mailto:contact@alexchen.dev"
+              href="mailto:contact@nikko.alferez@gmail.com"
               className="px-8 py-3.5 bg-transparent border border-white/10 hover:border-white/20 text-white font-hanken font-semibold text-sm rounded-lg transition-colors duration-200 cursor-pointer"
             >
               Contact Me
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="relative w-64 h-64 md:w-72 md:h-72 p-2 bg-[#1F1F1F] border-2 border-white/8 rounded-full shadow-2xl overflow-hidden">
             <Image
               src="/formal.jpg"
-              alt="Alex Chen Avatar"
+              alt="Nikko Alferez Avatar"
               fill
               className="object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-500"
               priority
