@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hanken_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { AdminProvider } from "@/components/ui/AdminGate";
 import "./globals.css";
 
 const hankenGrotesk = Hanken_Grotesk({
@@ -41,11 +42,13 @@ export default function RootLayout({
       className={`${hankenGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#131313] text-[#E2E2E2] font-sans selection:bg-accent-blue/30 selection:text-white">
-        <Navbar />
-        <main className="flex-grow flex flex-col">
-          {children}
-        </main>
-        <Footer />
+        <AdminProvider>
+          <Navbar />
+          <main className="flex-grow flex flex-col">
+            {children}
+          </main>
+          <Footer />
+        </AdminProvider>
       </body>
     </html>
   );
