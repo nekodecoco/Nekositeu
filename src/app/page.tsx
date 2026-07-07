@@ -22,7 +22,7 @@ export default function Home() {
           <h1 className="font-hanken font-bold text-5xl md:text-7xl leading-tight text-white tracking-tight">
             I&apos;m Nikko Alferez.
             <span className="block text-accent-blue mt-1">
-              Designer & Coder.
+              Designer, Coder & Educator.
             </span>
           </h1>
 
