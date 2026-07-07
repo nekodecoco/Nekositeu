@@ -325,7 +325,7 @@ export default function CatProfilePage({
       {/* Add photo */}
       <Modal
         isOpen={addOpen}
-        onClose={() => { setAddOpen(false); setAddCaption(""); setAddFile(null); setAddPreview(""); }}
+        onClose={() => { setAddOpen(false); setAddCaption(""); setAddPreview(""); }}
         title={`Add Photo — ${cat.name}`}
       >
         <form onSubmit={handleAddSubmit} className="flex flex-col gap-4">
