@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Chen | Designer & Coder Portfolio",
+  title: "Nikko Alferez | Designer, Coder & Educator",
   description: "Minimalist portfolio showcase of digital products, brutalist archives, photography, and high-performance design systems.",
 };
 
