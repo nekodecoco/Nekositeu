@@ -2,9 +2,18 @@ import Link from "next/link";
 import { Heart, Calendar, Tag, ArrowRight } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
 import Badge from "@/components/ui/Badge";
-import { CATS } from "@/lib/cats-data";
+import { createClient } from "@/lib/supabase/server";
+import type { CatRow } from "@/lib/supabase/types";
 
-export default function CatsPage() {
+export default async function CatsPage() {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("cats")
+    .select("*")
+    .order("id")
+    .overrideTypes<CatRow[]>();
+  const cats = data ?? [];
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-16 w-full">
       {/* Header Section */}
@@ -24,7 +33,7 @@ export default function CatsPage() {
 
       {/* Cat Cards Scrolling Feed */}
       <div className="flex flex-col gap-12">
-        {CATS.map((cat, index) => {
+        {cats.map((cat, index) => {
           const isEven = index % 2 === 0;
           return (
             <GlassCard
@@ -35,7 +44,7 @@ export default function CatsPage() {
             >
               {/* Gradient Visual */}
               <div
-                className={`w-full lg:w-1/2 h-80 lg:h-auto bg-gradient-to-br ${cat.gradientFrom} ${cat.gradientTo} flex items-center justify-center relative`}
+                className={`w-full lg:w-1/2 h-80 lg:h-auto bg-gradient-to-br ${cat.gradient_from} ${cat.gradient_to} flex items-center justify-center relative`}
               >
                 <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
                 <div className="relative z-10 text-white/40 flex flex-col items-center gap-2">
@@ -51,7 +60,7 @@ export default function CatsPage() {
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-xs text-accent-blue tracking-widest uppercase font-medium">
-                      {cat.residentNumber}
+                      {cat.resident_number}
                     </span>
                     <Badge variant="outline">Active Assistant</Badge>
                   </div>
@@ -67,7 +76,7 @@ export default function CatsPage() {
                     </span>
                     <span className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-accent-blue" />
-                      Arrived {cat.arrivalDate}
+                      Arrived {cat.arrival_date}
                     </span>
                   </div>
 
